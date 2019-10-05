@@ -1,6 +1,20 @@
 # reversed_brainfuck compiler
 
-brainfuckマシンの配列を逆順にしたbrainfuckのコンパイラ
+brainfuckマシンの配列を逆順にしたr-brainfuckコンパイラ
+
+左に伸びる配列でポインタは右端を指す
+
+``` overview
+                    ptr
+                     v
+| ... | |a|r|r|a|y| | |
+-----------------------
+<- 0x000       0xfff ->
+```
+
+文字列の印字は変わらず左から右の順になるので注意
+
+右端より右にポインタが動いた際の動作は未定義
 
 ## using
 
